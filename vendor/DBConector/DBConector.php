@@ -5,7 +5,7 @@ class DBConector
 	public static const $drives array(
 		"MySQL" => true,
 		"PostgreSQL" => true,
-		"SQLite" => false
+		"SQLite3" => false
 		);
 
 	public $insert_id;
