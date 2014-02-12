@@ -1,4 +1,7 @@
 <?php
+if( !array_key_exist("app",$config) || !array_key_exist("database",$config))
+	die("Config files no found");
+
 $interfacesDir = __DIR__ . "interfaces/";
 $implementsDir = __DIR__ . "implements/";
 

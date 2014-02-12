@@ -16,15 +16,20 @@ class DBConector
 	private $db_name;
 	private $db_user;
 	private $db_pass;
-	private $db_conn;
+	private $db_charset;
+
+	protected $db_conn;
+
 	private $drive_is_server = false;
 
 	private $implementor;
 
 	public __construct()
 	{
-		$this->db_drive = $config["database"]["db_drive"];
-		$this->db_name  = $config["database"]["db_name"];
+		$dbConfig = $config["database"][ $config["app"]["environment"] ];
+
+		$this->db_drive = $dbConfig["db_drive"];
+		$this->db_name  = $dbConfig["db_name"];
 
 		$driveClassName = "";
 		foreach(self::$drives as $key => $value) { //each of supported drives
@@ -35,9 +40,9 @@ class DBConector
 		}
 
 		if($drive_is_server) { //if the drive is server, get the host from settings
-			$this->db_host = $config["database"]["db_host"]; 
-			$this->db_user  = $config["database"]["db_user"];
-			$this->db_pass  = $config["database"]["db_pass"];
+			$this->db_host  = $dbConfig["db_host"]; 
+			$this->db_user  = $dbConfig["db_user"];
+			$this->db_pass  = $dbConfig["db_pass"];
 		} else {
 			$this->db_host = NULL;
 			$this->db_user = NULL;
