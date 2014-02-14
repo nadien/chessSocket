@@ -5,10 +5,10 @@
 -- --------------------------------------------------------
 
 --
--- table `match`
+-- table `chessmatch`
 --
 
-CREATE TABLE IF NOT EXISTS `match` (
+CREATE TABLE IF NOT EXISTS `chessmatch` (
   `id` int(20) unsigned NOT NULL AUTO_INCREMENT,
   `white_player_key` int(15) DEFAULT NULL,
   `black_player_key` int(15) DEFAULT NULL,
@@ -30,11 +30,11 @@ CREATE TABLE IF NOT EXISTS `match` (
 -- --------------------------------------------------------
 
 --
--- table `chesser`
+-- table `player`
 --
 
 
-CREATE TABLE IF NOT EXISTS `chesser` (
+CREATE TABLE IF NOT EXISTS `player` (
   `id` int(15) unsigned NOT NULL AUTO_INCREMENT,
   `email` varchar(60) unsigned NOT NULL,
   `private_key` varchar(60) unsigned NOT NULL,
