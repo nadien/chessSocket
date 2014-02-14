@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `chessmatch` (
   `fen_position` char(85) NOT NULL,
   `game_start` timestamp NOT NULL DEFAULT 0,
   `game_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `game_end` timestamp NULL DEFAULT NULL,
+  `game_end` timestamp NULL DEFAULT 0,
   `status_code` int(3) unsigned NOT NULL DEFAULT 10,
   FOREIGN KEY (white_player_key) 
     REFERENCES player(id)
