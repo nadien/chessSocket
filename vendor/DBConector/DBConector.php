@@ -1,15 +1,12 @@
 <?php
-class DBConector
+class DBConector extends DBDrive
 {
 	// the supported drives and bool value if it's server
-	public static const $drives array(
+	public static $drives = array(
 		"MySQL" => true,
 		"PostgreSQL" => true,
 		"SQLite3" => false
 		);
-
-	public $insert_id;
-
 
 	private $db_drive;
 	private $db_host;
@@ -18,13 +15,11 @@ class DBConector
 	private $db_pass;
 	private $db_charset;
 
-	protected $db_conn;
-
 	private $drive_is_server = false;
 
 	private $implementor;
 
-	public __construct()
+	public function __construct()
 	{
 		$dbConfig = $config["database"][ $config["app"]["environment"] ];
 
@@ -58,7 +53,7 @@ class DBConector
 			throw new Exception("Error connecting to database: " . $this->implementor->connect_error);
 	}
 
-	public query($query)
+	public function query($query)
 	{
 		if($this->implementor->query($query))
 			$this->insert_id = $this->implementor->insert_id;
@@ -66,9 +61,11 @@ class DBConector
 			throw new Exception("Error in database: " + $this->implementor->error);
 	}
 
-	public  
+	public function close()
+	{
+	} 
 
-	public __destruct()
+	public function __destruct()
 	{
 		$this->implementor->close();
 	}
