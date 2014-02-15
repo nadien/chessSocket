@@ -27,10 +27,10 @@ abstract class DBDrive {
 	abstract public function fetch_row();
 	abstract public function field_is_null();
 
-	abstract public function select_db();
+	abstract public function select_db($db);
 	
-	public function set_charset()
+	public function set_charset($charset)
 	{
-		$conn->query("SET NAMES utf8");
+		return $conn->query("SET NAMES " . $charset);
 	}
 };
