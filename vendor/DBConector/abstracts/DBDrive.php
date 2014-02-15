@@ -21,4 +21,15 @@ abstract class DBDrive {
         $replace = array("\\\\","\\0","\\n","\\r","\Z","\'",'\"');
 		return str_replace( $search, $replace, $str );
 	}
+	
+	abstract public funtion fetch_all_columns();
+	abstract public funtion fetch_all();
+	abstract public funtion fetch_array();
+	abstract public funtion fetch_assoc();
+	abstract public funtion fetch_object();
+	abstract public funtion fetch_row();
+	abstract public funtion field_is_null();
+
+	abstract public function select_db();
+	abstract public function set_charset();
 };
