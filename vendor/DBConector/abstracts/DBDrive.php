@@ -10,7 +10,7 @@ abstract class DBDrive {
 	abstract public function close();//close connection
 	abstract public function get_charset();//return and collate object
 	
-	abstract public function query();//exec a single query
+	abstract public function query($sql);//exec a single query
 
 	public function scape_string($str)
 	{
