@@ -2,6 +2,7 @@
 abstract class DBDrive {
 
 	public $affected_rows;
+	public $insert_id;
 	public $connect_errno;
 	public $connect_error;
 	
