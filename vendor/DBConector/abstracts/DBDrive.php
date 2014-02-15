@@ -28,5 +28,9 @@ abstract class DBDrive {
 	abstract public function field_is_null();
 
 	abstract public function select_db();
-	abstract public function set_charset();
+	
+	public function set_charset()
+	{
+		$conn->query("SET NAMES utf8");
+	}
 };
