@@ -10,9 +10,6 @@ abstract class DBDrive {
 	abstract public function close();//close connection
 	abstract public function get_charset();//return and collate object
 	
-	abstract public function multi_query();//exec multiple querys	
-	abstract public function next_result();//return the next result for multi_query()
-	
 	abstract public function query();//exec a single query
 
 	public function scape_string($str)
