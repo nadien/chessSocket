@@ -22,13 +22,13 @@ abstract class DBDrive {
 		return str_replace( $search, $replace, $str );
 	}
 	
-	abstract public funtion fetch_all_columns();
-	abstract public funtion fetch_all();
-	abstract public funtion fetch_array();
-	abstract public funtion fetch_assoc();
-	abstract public funtion fetch_object();
-	abstract public funtion fetch_row();
-	abstract public funtion field_is_null();
+	abstract public function fetch_all_columns();
+	abstract public function fetch_all();
+	abstract public function fetch_array();
+	abstract public function fetch_assoc();
+	abstract public function fetch_object();
+	abstract public function fetch_row();
+	abstract public function field_is_null();
 
 	abstract public function select_db();
 	abstract public function set_charset();
