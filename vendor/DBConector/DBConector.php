@@ -53,20 +53,39 @@ class DBConector extends DBDrive
 			throw new Exception("Error connecting to database: " . $this->implementor->connect_error);
 	}
 
-	public function query($query)
+	public function query($sql)
 	{
-		if($this->implementor->query($query))
+		$result = $this->implementor->query($sql);
+		if($result) {
 			$this->insert_id = $this->implementor->insert_id;
-		else
+			$this->affected_rows = $this->implementor->affected_rows;
+		}else
 			throw new Exception("Error in database: " + $this->implementor->error);
+		return $result;
 	}
 
 	public function close()
 	{
+		return $this->implementor->close();
 	} 
+
+	public function get_charset()
+	{
+		return $this->implementor->get_charset();
+	}
+
+	public function scape_string($str)
+	{
+		return $this->implementor->scape_string($str);
+	} 
+
+	public function fetch_all_columns()
+	{
+		return $this->implementor->fetch_all_columns();
+	}
 
 	public function __destruct()
 	{
 		$this->implementor->close();
 	}
-}
+};
