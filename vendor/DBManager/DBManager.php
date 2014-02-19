@@ -4,7 +4,7 @@ class DBManager extends PDO
 	 public static $drives = array(
         "MySQL"      => array(true, "mysql"),
         "PostgreSQL" => array(true, "pgsql"),
-		"SQLite2"    => array(false, "sqlite2"),
+	"SQLite2"    => array(false, "sqlite2"),
         "SQLite3"    => array(false, "sqlite")
     );
 
