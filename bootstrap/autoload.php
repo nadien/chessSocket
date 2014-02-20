@@ -1,2 +1,3 @@
 <?php
-echo realpath(__FILE__;
+require_once "paths.php";
+require_once $paths["vendor"] . "autoload.php";
