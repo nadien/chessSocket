@@ -1,9 +1,9 @@
 <?php
 $paths = array(
 	
-	"config" = __DIR__ . "../config",
+	"config" => __DIR__ . "/../config/",
 	
-	"app"    = __DIR__ . "../app/",
+	"app"    => __DIR__ . "/../app/",
 	
-	"verdor" = __DIR__ . "../vendor/"
+	"vendor" => __DIR__ . "/../vendor/"
 );
