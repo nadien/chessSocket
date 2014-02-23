@@ -1,4 +1,4 @@
 <?php
 require "bootstrap/autoload.php";
 
-$ub = new ChessGame;
+$ub = new Chess\Game\ChessGame();

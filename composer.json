@@ -1,6 +1,7 @@
 {
     "require": {
-			"chesscom/chess-game": "dev-master",
-			"fenom/fenom": "~1.4.8"
+			"chesscom/chess-game": "dev-develop",
+      "fenom/fenom": "~1.4.8"
+
     }
 }
