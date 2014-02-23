@@ -1,3 +1,4 @@
 <?php
-require_once "bootstrap/autoload.php";
+require "bootstrap/autoload.php";
 
+$ub = new \chessCom\chess\ChessGame;

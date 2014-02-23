@@ -186,6 +186,7 @@ class Autoloader
             require $file;
             return true;
         }
+        echo $file . " no found.";
         return false;
     }
 }

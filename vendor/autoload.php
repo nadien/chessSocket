@@ -1,7 +1,7 @@
 <?php
-require "jwage/SplClassLoader.php";
+require "PRS/Autoloader.php";
 
-$classLoader = new \PRS\SplClassLoader;
+$classLoader = new \PRS\Autoloader;
 $classLoader->register();
 
-$classLoader->addNamespace("\\",$paths["vendor"]);
+$classLoader->addNamespace("\\chessCom",$paths["vendor"] ."chessCom/");

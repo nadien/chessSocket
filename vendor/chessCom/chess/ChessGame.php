@@ -1,5 +1,5 @@
 <?php
-namespace chessCom\Chess-Game;
+namespace chessCom\chess;
 
 /**
  * ABSTRACT parent class - use {@link Games_Chess_Standard} for a typical
